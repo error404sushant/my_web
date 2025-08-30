@@ -107,6 +107,18 @@ body {
     transition: 0.3s;
 }
 
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
@@ -770,7 +782,7 @@ section {
     justify-content: center;
     width: 50px;
     height: 50px;
-    background: var(--primary-color);
+    background: var(--secondary-color);
     color: white;
     border-radius: 50%;
     text-decoration: none;
@@ -780,7 +792,7 @@ section {
 
 .social-link:hover {
     transform: translateY(-3px);
-    background: var(--secondary-color);
+    background: var(--primary-color);
 }
 
 .contact-item h4 {
