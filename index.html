@@ -1,22 +1,366 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My React App</title>
-    <script type="module">
-      if (import.meta.hot?.on) {
-        import.meta.hot.on('vite:error', (error) => {
-          if (error.err) {
-            console.error([error.err.message, error.err.frame].filter(Boolean).join('\n'));
-          }
-        });
-      }
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>143tech - Flutter App Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>143tech</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Flutter App Developer</h1>
+                <p class="hero-subtitle">Passionate about creating beautiful, cross-platform mobile applications with Flutter</p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary">Learn More</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-card">
+                    <img src="https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20software%20developer%20portrait%20clean%20background%20modern%20style&image_size=square" alt="143tech - Flutter Developer" class="profile-img">
+                    <div class="flutter-icon">
+                        <i class="fab fa-flutter"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Professional Profile</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>143tech</h3>
+                    <p class="job-title">Flutter App Developer</p>
+                    <p class="about-description">
+                        Senior Software Engineer with 6+ years of experience in Flutter and mobile application development. Currently working at Binimise Labs, specializing in cross-platform mobile applications with expertise in Flutter, Swift, and Kotlin.
+                    </p>
+                    <div class="experience">
+                        <h4>Professional Experience</h4>
+                        <div class="experience-item">
+                            <h5>Senior Software Engineer - Binimise Labs</h5>
+                            <p class="experience-duration">Mar 2025 - Present (6 months) | Remote</p>
+                            <p class="experience-description">Full-time role focusing on Flutter, Swift programming and mobile development.</p>
+                        </div>
+                        <div class="experience-item">
+                            <h5>Software Development Engineer I - Socially X</h5>
+                            <p class="experience-duration">Jan 2022 - Jan 2025 (3 years 1 month) | Remote</p>
+                            <p class="experience-description">Developed a unique hybrid app combining e-commerce and social media, enabling sellers to post products and buyers to interact via a dynamic feed. Specialized in Flutter and Mobile Applications development.</p>
+                        </div>
+                    </div>
+                    <p>My expertise includes state management, API integration, custom UI components, and publishing packages to the Flutter ecosystem. I'm committed to writing clean, maintainable code and staying updated with the latest Flutter developments.</p>
+                    <div class="skills">
+                        <h4>Core Skills</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Flutter</span>
+                            <span class="skill-tag">Dart</span>
+                            <span class="skill-tag">Mobile Development</span>
+                            <span class="skill-tag">Cross-platform</span>
+                            <span class="skill-tag">UI/UX Design</span>
+                            <span class="skill-tag">State Management</span>
+                            <span class="skill-tag">API Integration</span>
+                            <span class="skill-tag">Firebase</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/sushanta-kumar-behera-88b334220" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                            LinkedIn Profile
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">GitHub Projects</h2>
+            <p class="section-subtitle">Explore my open-source Flutter projects and contributions</p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Teams Tracker</h3>
+                    <p class="project-description">
+                        Face-Based Attendance system with quick and secure check-in using facial recognition. 
+                        Automated Reports for easy tracking and managing attendance records. Secure & Reliable preventing proxy attendance.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Swift</span>
+                        <span class="tech-tag">Kotlin</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://play.google.com/store/apps/details?id=com.binimise.staff.generic&hl=en" target="_blank" class="btn-circular android" title="Download on Google Play">
+                            <i class="fab fa-android"></i>
+                        </a>
+                        <a href="https://apps.apple.com/in/app/teams-tracker/id6743546886" target="_blank" class="btn-circular ios" title="Download on App Store">
+                            <i class="fab fa-apple"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-cricket-ball"></i>
+                    </div>
+                    <h3>Player Pedia</h3>
+                    <p class="project-description">
+                        A completely offline app built with Flutter for managing cricket player data. 
+                        Uses Hive for secure, fast storage, and fetches player images online.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Hive</span>
+                        <span class="tech-tag">NoSQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/error404sushant/player_pedia" target="_blank" class="btn-circular github" title="View on GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Swadesic</h3>
+                    <p class="project-description">
+                        Combining e-commerce and social networking, tailored for Swadeshi products. 
+                        Features secure user authentication, product listings, real-time messaging, advanced search, and seamless payment integration.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Mobile Applications</span>
+                        <span class="tech-tag">Dart</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://play.google.com/store/apps/details?id=com.sociallyx.swadesic&hl=en_IN" target="_blank" class="btn-circular android" title="Download on Google Play">
+                            <i class="fab fa-android"></i>
+                        </a>
+                        <a href="https://swadesic.com/" target="_blank" class="btn-circular web" title="Visit Website">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Seed Hacker</h3>
+                    <p class="project-description">
+                        Creates multiple Ethereum wallets and checks the balance of each wallet. 
+                        The checking process will stop as soon as any wallet has more than $1 worth of cryptocurrency.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Dart</span>
+                        <span class="tech-tag">Mobile Applications</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/error404sushant" target="_blank" class="btn-circular github" title="View on GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI Chat Bot</h3>
+                    <p class="project-description">
+                        AI chat app built with Flutter for seamless conversations with artificial intelligence.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">AI</span>
+                        <span class="tech-tag">Chat</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/error404sushant/tora_chat" target="_blank" class="btn-circular github" title="View on GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3>On Chain</h3>
+                    <p class="project-description">
+                        This app provides information on live Crypto coin prices and on chain data.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Dart</span>
+                        <span class="tech-tag">Mobile Applications</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://play.google.com/store/apps/details?id=com.on_chain&hl=en_IN" target="_blank" class="btn-circular android" title="Download on Google Play">
+                            <i class="fab fa-android"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            //Add padding on top 
+            <div style="padding-top: 20px;"></div>
+            <div class="github-link">
+                <a href="https://github.com/error404sushant" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-github"></i>
+                    View All Projects on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pub.dev Packages Section -->
+    <section id="packages" class="packages">
+        <div class="container">
+            <h2 class="section-title">Published Packages</h2>
+            <p class="section-subtitle">Published Flutter packages contributing to the community</p>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <div class="package-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3>date_change_checker</h3>
+                    <span class="version">v2.0.1</span>
+                    <p class="package-description">
+                        A cross-platform Flutter package that detects whether the device's date/time 
+                        has been changed (automatic date/time is disabled).
+                    </p>
+                    <div class="package-stats">
+                        <span class="stat"><i class="fas fa-heart"></i> 2 likes</span>
+                        <span class="stat"><i class="fas fa-star"></i> 150 points</span>
+                        <span class="stat"><i class="fas fa-download"></i> Downloads</span>
+                    </div>
+                    <div class="package-features">
+                        <span class="feature-tag">Dart 3 Compatible</span>
+                        <span class="feature-tag">Flutter SDK</span>
+                        <span class="feature-tag">Android</span>
+                        <span class="feature-tag">iOS</span>
+                        //Add padding on top 
+            <div style="padding-top: 20px;"></div>
+                    </div>
+                    <a href="https://pub.dev/packages/date_change_checker" target="_blank" class="btn btn-primary">View on Pub.dev</a>
+                </div>
+            </div>
+            <div class="publisher-info">
+                <p>Published under <strong>143tech.site</strong></p>
+                <a href="https://pub.dev/publishers/143tech.site/packages" target="_blank" class="btn btn-secondary">
+                    <i class="fas fa-cube"></i>
+                    View All Packages
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Information</h2>
+            <p class="section-subtitle">Let's connect and discuss your Flutter development needs</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-details">
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">sushanta.97.behera@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <div class="contact-details">
+                            <span class="contact-label">Website</span>
+                            <span class="contact-value">143tech.site</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-details">
+                            <span class="contact-label">Location</span>
+                            <span class="contact-value">India</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-briefcase"></i>
+                        <div class="contact-details">
+                            <span class="contact-label">Availability</span>
+                            <span class="contact-value">Open for freelance projects</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/error404sushant" target="_blank" class="social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sushanta-kumar-behera-88b334220" target="_blank" class="social-link" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://pub.dev/publishers/143tech.site/packages" target="_blank" class="social-link" title="Pub.dev">
+                        <i class="fas fa-cube"></i>
+                    </a>
+                    <a href="mailto:contact@143tech.site" class="social-link" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 143tech. All rights reserved.</p>
+                    <p>Flutter App Developer | 143tech.site</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/sushanta-kumar-behera-88b334220" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/error404sushant" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://pub.dev/publishers/143tech.site/packages" target="_blank">
+                        <i class="fas fa-cube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
 </html>
