@@ -111,8 +111,8 @@
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/sushanta-kumar-behera-88b334220" target="_blank" class="social-link" style="color: #0077B5;">
-                            <i class="fab fa-linkedin" style="color: #0077B5;"></i>
+                        <a href="https://www.linkedin.com/in/sushanta-kumar-behera-88b334220" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
                             LinkedIn Profile
                         </a>
                     </div>
@@ -252,7 +252,7 @@
                     </div>
                 </div>
             </div>
-            
+           
             <div style="padding-top: 20px;"></div>
             <div class="github-link">
                 <a href="https://github.com/error404sushant" target="_blank" class="btn btn-primary">
@@ -289,19 +289,19 @@
                         <span class="feature-tag">Flutter SDK</span>
                         <span class="feature-tag">Android</span>
                         <span class="feature-tag">iOS</span>
-                       
+                        
             <div style="padding-top: 20px;"></div>
                     </div>
                     <a href="https://pub.dev/packages/date_change_checker" target="_blank" class="btn btn-primary">View on Pub.dev</a>
                 </div>
             </div>
-            <!-- <div class="publisher-info"> -->
-                <!-- <p>Published under <strong>143tech.site</strong></p>
+            <div class="publisher-info">
+                <p>Published under <strong>143tech.site</strong></p>
                 <a href="https://pub.dev/publishers/143tech.site/packages" target="_blank" class="btn btn-secondary">
                     <i class="fas fa-cube"></i>
                     View All Packages
-                </a> -->
-            <!-- </div> -->
+                </a>
+            </div>
         </div>
     </section>
 
@@ -382,35 +382,5 @@
         </div>
     </footer>
 
-    <script>
-        // Mobile hamburger menu functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburger = document.querySelector('.hamburger');
-            const navMenu = document.querySelector('.nav-menu');
-            
-            hamburger.addEventListener('click', function() {
-                navMenu.classList.toggle('active');
-                hamburger.classList.toggle('active');
-            });
-            
-            // Close menu when clicking on a nav link
-            const navLinks = document.querySelectorAll('.nav-menu a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    navMenu.classList.remove('active');
-                    hamburger.classList.remove('active');
-                });
-            });
-            
-            // Close menu when clicking outside
-            document.addEventListener('click', function(event) {
-                const isClickInsideNav = navMenu.contains(event.target) || hamburger.contains(event.target);
-                if (!isClickInsideNav && navMenu.classList.contains('active')) {
-                    navMenu.classList.remove('active');
-                    hamburger.classList.remove('active');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
