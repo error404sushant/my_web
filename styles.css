@@ -1,4 +1,11 @@
 /* Reset and Base Styles */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #7c3aed;
+    --text-color: #1f2937;
+    --text-light: #6b7280;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +19,7 @@ html {
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: var(--text-color);
     background-color: #ffffff;
 }
 
@@ -384,48 +391,91 @@ section {
 }
 
 .experience {
-    margin: 2rem 0;
-    width: 100%;
+    margin: 3rem 0 3rem 2.5rem;
+    padding-left: 2rem;
+    border-left: 3px solid #e5e7eb;
+    position: relative;
+    width: calc(100% - 2.5rem);
+    text-align: left;
 }
 
 .experience h4 {
     color: var(--text-color);
-    margin-bottom: 1.5rem;
-    font-weight: 600;
-    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+    position: relative;
 }
 
 .experience-item {
-    margin-bottom: 1.5rem;
-    padding: 1.5rem;
+    margin-bottom: 2.5rem;
+    padding: 1.5rem 2rem;
     background: white;
     border-radius: 12px;
-    border-left: 4px solid #2563eb;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: none;
+    max-width: 100%;
+}
+
+.experience-item:hover {
+    transform: translateX(6px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Glowing timeline nodes */
+.experience-item::before {
+    content: '';
+    position: absolute;
+    left: -2rem; /* Position precisely on the border-left line */
+    top: 2.2rem;
+    width: 16px;
+    height: 16px;
+    background: white;
+    border: 4px solid var(--primary-color);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.experience-item:hover::before {
+    background: var(--primary-color);
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* Specific styling for present/current roles */
+.experience-item.present::before {
+    border-color: var(--secondary-color);
+    background: var(--secondary-color);
+    box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.25);
+}
+
+.experience-item.present:hover::before {
+    background: white;
 }
 
 .experience-item h5 {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
 }
 
 .experience-duration {
     color: var(--text-light);
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-    font-style: italic;
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
 }
 
 .experience-description {
     color: var(--text-color);
     line-height: 1.6;
     margin: 0;
+    font-size: 1rem;
 }
 
 .skills {
@@ -487,6 +537,8 @@ section {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
@@ -498,6 +550,15 @@ section {
     font-size: 3rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
+}
+
+.project-icon img {
+    height: 3rem;
+    width: auto;
+    object-fit: contain;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
 .project-card h3 {
@@ -661,7 +722,8 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-top: 1rem;
+    margin-top: auto;
+    padding-top: 1.5rem;
 }
 
 .project-links .btn {
